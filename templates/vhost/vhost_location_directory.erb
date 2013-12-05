@@ -26,7 +26,7 @@
 <% if defined? @auth_basic_user_file -%>
     auth_basic_user_file <%= @auth_basic_user_file %>;
 <% end -%>
-<% if @location_cfg_append -%><% @location_cfg_append.each do |key,value,values = Array(value)| -%>
+<% if @location_cfg_append -%><% @location_cfg_append.each do |key,value| -%>
   <% values = Array(value) -%>
   <% values.each do |v| %>
     <%= key %> <%= v %>;

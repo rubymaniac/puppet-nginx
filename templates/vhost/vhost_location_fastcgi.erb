@@ -19,7 +19,7 @@
 <% if defined? @fastcgi_script %>
     fastcgi_param SCRIPT_FILENAME <%= @fastcgi_script %>;
 <% end -%>
-<% if @location_cfg_append -%><% @location_cfg_append.each do |key,value,values = Array(value)| -%>
+<% if @location_cfg_append -%><% @location_cfg_append.each do |key,value| -%>
     <% values = Array(value) -%>
     <% values.each do |v| %>
         <%= key %> <%= v %>;
