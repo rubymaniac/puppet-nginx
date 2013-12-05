@@ -1,11 +1,13 @@
   location <%= @location %> {
-<% if @location_cfg_prepend -%><% @location_cfg_prepend.each do |key,value,values = Array(value)| -%>
-	<% values.each do |v| %>
+<% if @location_cfg_prepend -%><% @location_cfg_prepend.each do |key,value| -%>
+    <% values = Array(value) -%>
+    <% values.each do |v| %>
         <%= key %> <%= v %>;
     <% end %>
 <% end -%><% end -%>
     alias      <%= @location_alias %>;
 <% if @location_cfg_append -%><% @location_cfg_append.each do |key,value,values = Array(value)| -%>
+    <% values = Array(value) -%>
     <% values.each do |v| %>
         <%= key %> <%= v %>;
     <% end %>
